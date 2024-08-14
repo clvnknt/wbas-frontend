@@ -9,36 +9,37 @@
     top: 0;
     left: 0;
     z-index: 1000; /* Ensure it stays on top of other content */
-  }
-  
-  .navbar-container {
+    transform: translateY(0); /* Reset any transformation */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+.navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-  }
-  
-  .navbar-brand h1 {
+}
+
+.navbar-brand h1 {
     font-size: 1.25rem; /* Smaller logo text size */
     margin: 0;
-  }
-  
-  .navbar-links {
+}
+
+.navbar-links {
     display: flex;
     gap: 1rem;
-  }
-  
-  .nav-link {
+}
+
+.nav-link {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
     font-size: 0.875rem; /* Smaller font size */
     text-transform: capitalize; /* Capitalize text */
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .nav-link:hover {
+}
+
+.nav-link:hover {
     background-color: #555; /* Slightly lighter grey for hover */
     color: #ddd; /* Light grey text on hover */
-  }
-  
+}
