@@ -19,7 +19,7 @@ function Navbar() {
       }
       setPrevScrollY(currentScrollY);
 
-      // Show extra navbar when scrolling past the bottom of the Services section
+      // Show extra navbar when scrolling past the bottom of the Services sections
       const servicesSection = document.querySelector('#services-header-section');
       if (servicesSection) {
         const sectionBottom = servicesSection.getBoundingClientRect().bottom + window.scrollY;

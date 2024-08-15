@@ -301,51 +301,50 @@ function App() {
 <hr className="border-t-2 border-gray-300 my-8" />
 
 <section className="relative bg-transparent p-4 sm:p-6 mb-4 sm:mb-6 rounded-lg">
-      <h2 className="text-xl sm:text-2xl font-bold mb-4 z-10 relative">Global Marketing Reach</h2>
-      <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 relative z-0">
-        {/* First Container */}
-        <div className="flex-1 min-w-[250px] sm:min-w-[300px] bg-gray-50 p-4 rounded-lg flex flex-col sm:flex-row items-start relative">
-          {/* Image */}
-          <img 
-            src="./sections/partners/luxury.png" 
-            alt="Leading Real Estate Companies" 
-            className="w-full sm:w-[250px] md:w-[350px] h-auto object-contain rounded-lg mb-4 sm:mb-0 sm:mr-4 sm:self-start transition-transform transform sm:translate-y-0 sm:relative"
-          />
-          {/* Content */}
-          <div className="flex-1 pr-2 sm:pr-4">
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">Leading Real Estate Companies of The World® & Luxury Portfolio International</h3>
-            <p className="text-sm sm:text-base">
-              JRockcliff is a founding member of Luxury Portfolio International®, the luxury division of Leading Real Estate Companies of the World®. With more than 500 member firms around the world, our luxury listings are exposed to a vast global audience and reach potential buyers and investors in over 50 countries.
-            </p>
-          </div>
-        </div>
+  <h2 className="text-xl sm:text-2xl font-bold mb-4 z-10 relative">Global Marketing Reach</h2>
+  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 relative z-0">
+    
+  <div className="flex flex-col sm:flex-row gap-4">
+  {/* First Container with Image Above */}
+  <div className="flex-1 min-w-[300px] sm:min-w-[400px] flex flex-col">
+    <img 
+      src="./sections/partners/luxury.png" 
+      alt="Leading Real Estate Companies" 
+      className="w-full sm:w-[200px] md:w-[250px] h-auto object-contain rounded-lg mb-4 mx-auto"
+    />
+    <div className="bg-gray-50 p-4 rounded-lg flex flex-col flex-grow">
+      <h3 className="text-lg sm:text-xl font-semibold mb-2">Leading Real Estate Companies of The World® & Luxury Portfolio International</h3>
+      <p className="text-sm sm:text-base flex-grow">
+        JRockcliff is a founding member of Luxury Portfolio International®, the luxury division of Leading Real Estate Companies of the World®. With more than 500 member firms around the world, our luxury listings are exposed to a vast global audience and reach potential buyers and investors in over 50 countries.
+      </p>
+    </div>
+  </div>
 
-        {/* Second Container */}
-        <div className="flex-1 min-w-[250px] sm:min-w-[400px] bg-gray-50 p-4 rounded-lg flex flex-col sm:flex-row items-start relative">
-          {/* Image */}
-          <img 
-            src="./sections/partners/global.png" 
-            alt="Who's Who in Luxury Real Estate" 
-            className="w-full sm:w-[250px] md:w-[350px] h-auto object-contain rounded-lg mb-4 sm:mb-0 sm:mr-4 sm:self-start transition-transform transform sm:translate-y-0 sm:relative"
-          />
-          {/* Content */}
-          <div className="flex-1 pr-2 sm:pr-4">
-            <h3 className="text-lg sm:text-xl font-semibold mb-2">Who's Who in Luxury Real Estate</h3>
-            <p className="text-sm sm:text-base">
-              Who’s Who in Luxury Real Estate is a global collection of luxury real estate brokers. Through our international affiliations, we have a strong presence in over 50 countries. Our luxury listings are sent to prominent international real estate sites, reaching over 70 million potential buyers and investors worldwide through our relationships with:
-            </p>
-            <img 
-              src="./sections/partners/RealEstatePortals-L.png" 
-              alt="Real Estate Portals" 
-              className="w-full h-auto object-cover mt-4 rounded-lg"
-            />
-            <p className="mt-2 sm:mt-4 text-sm sm:text-base">
-              We also have several well-positioned affiliate offices in China, providing our clients with access to buyers in Hong Kong, Shanghai, and Beijing.
-            </p>
-          </div>
-        </div>
-      </div>
-
+  {/* Second Container with Image Above */}
+  <div className="flex-1 min-w-[300px] sm:min-w-[400px] flex flex-col">
+    <img 
+      src="./sections/partners/global.png" 
+      alt="Who's Who in Luxury Real Estate" 
+      className="w-full sm:w-[200px] md:w-[250px] h-auto object-contain rounded-lg mb-4 mx-auto"
+    />
+    <div className="bg-gray-50 p-4 rounded-lg flex flex-col flex-grow">
+      <h3 className="text-lg sm:text-xl font-semibold mb-2">Who's Who in Luxury Real Estate</h3>
+      <p className="text-sm sm:text-base">
+        Who's Who in Luxury Real Estate is a global collection of luxury real estate brokers. Through our international affiliations, we have a strong presence in over 50 countries. Our luxury listings are sent to prominent international real estate sites, reaching over 70 million potential buyers and investors worldwide through our relationships with:
+      </p>
+      <img 
+        src="./sections/partners/RealEstatePortals-L.png" 
+        alt="Real Estate Portals" 
+        className="w-full h-auto object-cover mt-4 rounded-lg"
+      />
+      <p className="mt-2 sm:mt-4 text-sm sm:text-base flex-grow">
+        We also have several well-positioned affiliate offices in China, providing our clients with access to buyers in Hong Kong, Shanghai, and Beijing.
+      </p>
+    </div>
+  </div>
+</div>
+  </div>
+ 
   {/* Third Section */}
   <section className="bg-transparent p-4 sm:p-6 mb-4 sm:mb-6 rounded-lg mt-4 sm:mt-6">
   <div className="flex flex-col md:flex-row items-center md:items-start gap-4 sm:gap-6">
@@ -357,8 +356,6 @@ function App() {
       className="w-[200px] sm:w-[250px] md:w-[300px] h-auto object-cover rounded-lg"
     />
   </div>
-
-
       {/* Marketing Tabs */}
       <div className="flex-1">
         <MarketingTabs />
@@ -367,9 +364,6 @@ function App() {
   </section>
 </section>
 
-
-
-    
     <section className="relative text-white bg-black  rounded-lg p-8 mb-6">
       <img
         src="./sections/work-with-us/wwu-bg.jpg"
