@@ -85,9 +85,9 @@ function Footer() {
       </div>
 
       <div className="flex justify-center items-center mt-6 sm:mt-8 mb-4 sm:mb-6">
-        <img src="sections/companies/realtor.png" alt="Placeholder 2" className="h-[40px] sm:h-[60px] mx-2"/>
-        <img src="sections/companies/eho.png" alt="Placeholder 1" className="h-[40px] sm:h-[60px] mx-2"/>
-        <img src="sections/companies/sereno.png" alt="Placeholder 3" className="h-[10px] sm:h-[15px] mx-2"/>
+        <img src="./sections/companies/realtor.png" alt="Placeholder 2" className="h-[40px] sm:h-[60px] mx-2"/>
+        <img src="./sections/companies/eho.png" alt="Placeholder 1" className="h-[40px] sm:h-[60px] mx-2"/>
+        <img src="./sections/companies/sereno.png" alt="Placeholder 3" className="h-[10px] sm:h-[15px] mx-2"/>
       </div>
 
       <div className="text-center text-gray-600 text-xs sm:text-sm">

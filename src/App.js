@@ -14,7 +14,7 @@ function App() {
 {/* Services Header Section */}
 <section id="services-header-section" className="relative mb-6">
   <img
-    src="/sections/services/services-1.jpg"
+    src="./sections/services/services-1.jpg"
     alt="Services Header"
     className="w-full h-[300px] object-cover rounded-lg"
   />
@@ -38,7 +38,7 @@ function App() {
 <div className="flex flex-col sm:flex-row justify-center gap-6 mb-6">
   <div className="w-full sm:w-[400px] h-[200px] sm:h-[300px] p-4">
     <img
-      src="/sections/comprehensive-marketing/2l.png"
+      src="./sections/comprehensive-marketing/2l.png"
       alt="Talking"
       className="w-full h-full object-cover rounded-lg"
     />
@@ -54,7 +54,7 @@ function App() {
         { src: 'Photography.png', title: 'Photography', desc: 'Beautiful, high-end photography is a central part of our marketing plan for your property.' }
       ].map((item, index) => (
         <div key={index} className="p-3 sm:p-4 bg-gray-50 rounded-lg shadow-sm flex items-start">
-          <img src={`/sections/comprehensive-marketing/${item.src}`} alt={item.title} className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg mr-3 sm:mr-4" />
+          <img src={`./sections/comprehensive-marketing/${item.src}`} alt={item.title} className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg mr-3 sm:mr-4" />
           <div className="flex-1">
             <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">{item.title}</h3>
             <p className="text-xs sm:text-sm">{item.desc}</p>
@@ -82,7 +82,7 @@ function App() {
         <div key={index} className="relative bg-black bg-opacity-50 rounded-lg p-4 h-[200px] sm:h-[250px]">
           {/* Background image for each step */}
           <img 
-            src={`/sections/my-staging-experience/${item.src}`} 
+            src={`./sections/my-staging-experience/${item.src}`} 
             alt={item.title} 
             className="absolute inset-0 w-full h-full object-cover rounded-lg opacity-60"
             style={{ filter: 'brightness(50%)' }}
@@ -99,7 +99,7 @@ function App() {
   {/* Main Image Section (unchanged) */}
   <div className="w-full sm:w-[400px] h-[300px] sm:h-[500px] p-4">
     <img
-      src="/sections/my-staging-experience/dgil.png"
+      src="./sections/my-staging-experience/dgil.png"
       alt="Staging"
       className="w-full h-full object-cover rounded-lg"
     />
@@ -140,7 +140,7 @@ function App() {
     <section key={index} className="relative rounded-lg overflow-hidden bg-black bg-opacity-50">
       {/* Background image */}
       <img
-        src={`/sections/processes/${process.img}`}
+        src={`./sections/processes/${process.img}`}
         alt={process.title}
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: 'brightness(50%)' }}
@@ -170,7 +170,7 @@ function App() {
 
       <section className="relative bg-black p-4 sm:p-6 mb-4 sm:mb-6 rounded-lg overflow-hidden">
   {/* Background image with opacity */}
-  <div className="absolute inset-0 w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('/sections/bgs/cozy-bg.png')", opacity: 0.7 }}></div>
+  <div className="absolute inset-0 w-full h-full bg-cover bg-center" style={{ backgroundImage: "url('./sections/bgs/cozy-bg.png')", opacity: 0.7 }}></div>
 
   <Carousel 
     showThumbs={false} 
@@ -207,7 +207,7 @@ function App() {
       <div key={index} className="flex flex-col md:flex-row items-start relative z-10">
         <div className="w-full md:w-1/2">
           <img 
-            src={`/sections/accomplishments/${item.img}`}
+            src={`./sections/accomplishments/${item.img}`}
             alt={item.title}
             className="w-full h-48 sm:h-56 md:h-auto object-cover md:object-contain rounded-lg"
           />
@@ -244,7 +244,7 @@ function App() {
 
 <section className="relative bg-black p-6 mb-6 rounded-lg overflow-hidden">
   {/* Background image with opacity */}
-  <div className="absolute inset-0 w-full h-full bg-cove bg-center" style={{ backgroundImage: "url('/sections/bgs/houses.jpg')", opacity: 0.6 }}></div>
+  <div className="absolute inset-0 w-full h-full bg-cove bg-center" style={{ backgroundImage: "url('./sections/bgs/houses.jpg')", opacity: 0.6 }}></div>
   
   <div className="relative z-10">
     <h2 className="text-2xl font-bold mb-4 text-white">We Market Your Home to The World</h2>
@@ -263,7 +263,7 @@ function App() {
         </div>
         <div className="w-full md:w-1/3 h-[250px] bg-gray-200 rounded-lg">
           <img
-            src="/sections/partners/Nextdoor.png"
+            src="./sections/partners/Nextdoor.png"
             alt="Local Exposure"
             className="w-full h-full object-cover rounded-lg"
           />
@@ -273,7 +273,7 @@ function App() {
       <div className="flex flex-col md:flex-row items-center gap-4 mb-4">
         <div className="w-full md:w-1/3 h-[250px] bg-gray-200 rounded-lg">
           <img
-            src="/sections/partners/RTZ.png"
+            src="./sections/partners/RTZ.png"
             alt="National Exposure"
             className="w-full h-full object-cover rounded-lg"
           />
@@ -295,7 +295,7 @@ function App() {
         </div>
         <div className="w-full md:w-1/3 h-[250px] bg-gray-200 rounded-lg">
           <img
-            src="/sections/partners/RealEstatePortals.png"
+            src="./sections/partners/RealEstatePortals.png"
             alt="International Exposure"
             className="w-full h-full object-cover rounded-lg"
           />
@@ -315,7 +315,7 @@ function App() {
     <div className="flex-1 min-w-[250px] sm:min-w-[300px] bg-gray-50 p-4 rounded-lg flex-col sm:flex-row flex items-start">
       {/* Image for Mobile */}
       <img 
-        src="/sections/partners/luxury.png" 
+        src="./sections/partners/luxury.png" 
         alt="Leading Real Estate Companies" 
         className="w-[150px] sm:w-[250px] md:w-[350px] h-auto object-contain rounded-lg mb-4 sm:mb-0 sm:mr-4 sm:self-center mx-auto sm:mx-0"
       />
@@ -332,7 +332,7 @@ function App() {
     <div className="flex-1 min-w-[250px] sm:min-w-[400px] bg-gray-50 p-4 rounded-lg flex-col sm:flex-row flex items-start">
       {/* Image for Mobile */}
       <img 
-        src="/sections/partners/global.png" 
+        src="./sections/partners/global.png" 
         alt="Who's Who in Luxury Real Estate" 
         className="w-[150px] sm:w-[250px] md:w-[350px] h-auto object-contain rounded-lg mb-4 sm:mb-0 sm:mr-4 sm:self-center mx-auto sm:mx-0"
       />
@@ -343,7 +343,7 @@ function App() {
           Who’s Who in Luxury Real Estate is a global collection of luxury real estate brokers. Through our international affiliations, we have a strong presence in over 50 countries. Our luxury listings are sent to prominent international real estate sites, reaching over 70 million potential buyers and investors worldwide through our relationships with:
         </p>
         <img 
-          src="/sections/partners/RealEstatePortals-L.png" 
+          src="./sections/partners/RealEstatePortals-L.png" 
           alt="Placeholder Image" 
           className="w-full h-auto object-cover mt-4 rounded-lg"
         />
@@ -360,7 +360,7 @@ function App() {
   {/* Image Placeholder */}
   <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-4 md:self-start self-center">
     <img
-      src="/sections/partners/PhoneLandscape.png"
+      src="./sections/partners/PhoneLandscape.png"
       alt="Image Placeholder"
       className="w-[200px] sm:w-[250px] md:w-[300px] h-auto object-cover rounded-lg"
     />
@@ -380,7 +380,7 @@ function App() {
     
     <section className="relative text-white bg-black  rounded-lg p-8 mb-6">
       <img
-        src="/sections/work-with-us/wwu-bg.jpg"
+        src="./sections/work-with-us/wwu-bg.jpg"
         alt="Work With Us Background"
         className="absolute inset-0 w-full h-full object-cover rounded-lg opacity-60"
       />

@@ -52,7 +52,7 @@ function Navbar() {
       <div className="container mx-auto flex justify-between items-center p-4 relative">
         <div className="text-lg font-bold">
           <img 
-            src="/sections/logos/jhs.png" 
+            src="./sections/logos/jhs.png" 
             alt="JH | Sereno"
             className="w-auto h-8" 
           />
