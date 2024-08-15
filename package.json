@@ -1,7 +1,6 @@
 {
   "name": "wbas-frontend",
   "version": "0.1.0",
-  "homepage": "https://clvnknt.github.io/wbas-frontend",
   "private": true,
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
