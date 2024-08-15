@@ -278,7 +278,7 @@ function App() {
             className="w-full h-full object-cover rounded-lg"
           />
         </div>
-        <div className="flex-1 bg-gray-50 p-4 rounded-lg">
+        <div className="flex-1 bg-white bg-opacity-70 p-4 rounded-lg">
           <h3 className="text-lg font-semibold mb-2">National Exposure</h3>
           <p>
             We secure strategic positioning and enhancement on Realtor.com, Trulia, and Zillow, driving more consumers to your home and increasing exposure. We will receive every inquiry about your property directly.
@@ -287,7 +287,7 @@ function App() {
       </div>
 
       <div className="flex flex-col md:flex-row items-center gap-4 mb-4">
-        <div className="flex-1 bg-gray-50 p-4 rounded-lg">
+        <div className="flex-1 bg-white bg-opacity-70 p-4 rounded-lg">
           <h3 className="text-lg font-semibold mb-2">International Exposure</h3>
           <p>
             To expose your luxury listing to millions of potential homebuyers worldwide, we promote on prominent international real estate portals, including: Wall Street Journal, LuxuryPortfolio.com, LuxuryRealEstate.com, LeadingRE.com, UniqueHomes.com, China.apr.com, Caimeiju, Juwai, Country Life UK.

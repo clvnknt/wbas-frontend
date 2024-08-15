@@ -60,7 +60,7 @@ function Navbar() {
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none"
+            className="text-white focus:outline-none relative z-60"
           >
             {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -68,13 +68,12 @@ function Navbar() {
         <div
           className={`md:flex md:items-center space-y-4 md:space-y-0 md:space-x-4 absolute md:relative top-full left-0 w-full md:w-auto ${
             isMenuOpen ? 'block' : 'hidden'
-          } p-4 md:p-0`}
-          style={{ backgroundColor: '#1a1a1a' }}
+          } p-4 md:p-0 bg-[#1a1a1a] z-50`}
         >
           {isMenuOpen && (
             <button
               onClick={toggleMenu}
-              className="absolute top-4 right-4 text-white text-2xl"
+              className="absolute top-4 right-4 text-white text-2xl z-60"
             >
               <FaTimes />
             </button>
