@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/wbas-frontend/static/css/main.c96e3d2b.css",
-    "main.js": "/wbas-frontend/static/js/main.5269b537.js",
-    "static/js/453.edb379de.chunk.js": "/wbas-frontend/static/js/453.edb379de.chunk.js",
-    "index.html": "/wbas-frontend/index.html",
-    "main.c96e3d2b.css.map": "/wbas-frontend/static/css/main.c96e3d2b.css.map",
-    "main.5269b537.js.map": "/wbas-frontend/static/js/main.5269b537.js.map",
-    "453.edb379de.chunk.js.map": "/wbas-frontend/static/js/453.edb379de.chunk.js.map"
+    "main.css": "./static/css/main.c96e3d2b.css",
+    "main.js": "./static/js/main.bcba2754.js",
+    "static/js/453.edb379de.chunk.js": "./static/js/453.edb379de.chunk.js",
+    "index.html": "./index.html",
+    "main.c96e3d2b.css.map": "./static/css/main.c96e3d2b.css.map",
+    "main.bcba2754.js.map": "./static/js/main.bcba2754.js.map",
+    "453.edb379de.chunk.js.map": "./static/js/453.edb379de.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c96e3d2b.css",
-    "static/js/main.5269b537.js"
+    "static/js/main.bcba2754.js"
   ]
 }
