@@ -7,10 +7,9 @@ import MarketingTabs from './services-components/marketing-tabs'
 
 function App() {
   return (
-
     <div className="bg-gray-100 min-h-screen p-8 pt-20">
       <Navbar />
-
+      
 {/* Services Header Section */}
 <section id="services-header-section" className="relative mb-6">
   <img
@@ -18,25 +17,25 @@ function App() {
     alt="Services Header"
     className="w-full h-[300px] object-cover rounded-lg"
   />
-  <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-10 rounded-lg">
-    <h2 className="text-4xl font-bold mb-4">Services</h2>
-    <div className="flex flex-col md:flex-row gap-4 mt-4">
-      <button className="bg-transparent border border-white text-white px-4 py-2 rounded-lg shadow-md hover:bg-white hover:text-black">
+  <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-30 rounded-lg">
+    <h2 className="text-3xl md:text-4xl font-bold mb-4">Services</h2>
+    <div className="flex flex-col md:flex-row gap-2 md:gap-4">
+      <button className="bg-transparent border border-white text-white px-3 py-2 rounded-lg shadow-md hover:bg-white hover:text-black transition-colors">
         Book an Appointment
       </button>
       <input
         type="text"
         placeholder="Search by area..."
-        className="p-2 rounded-lg shadow-md"
+        className="p-2 rounded-lg shadow-md bg-white text-black focus:outline-none"
       />
     </div>
   </div>
 </section>
 
-
 {/* Comprehensive Marketing Plan Section */}
 <div className="flex flex-col sm:flex-row justify-center gap-6 mb-6">
-  <div className="w-full sm:w-[400px] h-[200px] sm:h-[300px] p-4">
+  {/* Image Section */}
+  <div className="w-full sm:w-[400px] h-[200px] sm:h-[300px] p-4 landscape-hidden">
     <img
       src="./sections/comprehensive-marketing/2l.png"
       alt="Talking"
@@ -44,20 +43,21 @@ function App() {
     />
   </div>
 
+  {/* Content Section */}
   <section className="bg-transparent rounded-lg p-4 flex-1 min-w-[300px]">
-    <h2 className="text-lg sm:text-xl font-bold mb-4">Comprehensive Marketing Plan</h2>
+    <h2 className="text-lg sm:text-xl font-bold mb-6">Comprehensive Marketing Plan</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {[
-        { src: 'Responsive.png', title: 'Responsive', desc: 'I am always available via phone, text, or email.' },
-        { src: 'Syndication.png', title: 'Syndication', desc: 'I market your property locally, nationally, and internationally.' },
-        { src: 'VirtualTour.png', title: 'Virtual Tour', desc: 'Let\'s make your home stand out with a high-quality virtual tour.' },
-        { src: 'Photography.png', title: 'Photography', desc: 'Beautiful, high-end photography is a central part of our marketing plan for your property.' }
+        { src: 'Responsive.png', title: 'Responsive', desc: 'Always available via phone, text, or email.' },
+        { src: 'Syndication.png', title: 'Syndication', desc: 'Market your property locally, nationally, and internationally.' },
+        { src: 'VirtualTour.png', title: 'Virtual Tour', desc: 'High-quality virtual tour to make your home stand out.' },
+        { src: 'Photography.png', title: 'Photography', desc: 'Beautiful, high-end photography for marketing.' }
       ].map((item, index) => (
-        <div key={index} className="p-3 sm:p-4 bg-gray-50 rounded-lg shadow-sm flex items-start">
-          <img src={`./sections/comprehensive-marketing/${item.src}`} alt={item.title} className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-lg mr-3 sm:mr-4" />
+        <div key={index} className="p-4 bg-gray-50 rounded-lg shadow-sm flex items-start space-x-4">
+          <img src={`./sections/comprehensive-marketing/${item.src}`} alt={item.title} className="w-16 h-16 object-cover rounded-lg" />
           <div className="flex-1">
-            <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">{item.title}</h3>
-            <p className="text-xs sm:text-sm">{item.desc}</p>
+            <h3 className="text-base sm:text-lg font-semibold mb-2">{item.title}</h3>
+            <p className="text-sm">{item.desc}</p>
           </div>
         </div>
       ))}
@@ -65,11 +65,11 @@ function App() {
   </section>
 </div>
 
-      <hr className="border-t-2 border-gray-300 my-8" />
-
+<hr className="border-t-2 border-gray-300 my-8" />
 
 {/* My Staging Expertise Section */}
 <div className="flex flex-col-reverse sm:flex-row justify-center gap-6 mb-6">
+  {/* Content Section */}
   <section className="bg-transparent rounded-lg p-4 flex-1 min-w-[300px]">
     <h2 className="text-lg sm:text-xl font-bold mb-4">My Staging Expertise</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -96,8 +96,8 @@ function App() {
     </div>
   </section>
 
-  {/* Main Image Section (unchanged) */}
-  <div className="w-full sm:w-[400px] h-[300px] sm:h-[500px] p-4">
+  {/* Main Image Section */}
+  <div className="w-full sm:w-[400px] h-[300px] sm:h-[500px] p-4 landscape-hidden">
     <img
       src="./sections/my-staging-experience/dgil.png"
       alt="Staging"
@@ -106,11 +106,7 @@ function App() {
   </div>
 </div>
 
-
-
-
-
-      <hr className="border-t-2 border-gray-300 my-8" />
+<hr className="border-t-2 border-gray-300 my-8" />
 
 {/* The Selling and Buying Processes Section */}
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -235,10 +231,6 @@ function App() {
   </Carousel>
 </section>
 
-
-
-
-
 <hr className="border-t-2 border-gray-300 my-8 " />
 
 
@@ -308,51 +300,51 @@ function App() {
 
 <hr className="border-t-2 border-gray-300 my-8" />
 
-<section className="bg-transparent p-4 sm:p-6 mb-4 sm:mb-6 rounded-lg">
-  <h2 className="text-xl sm:text-2xl font-bold mb-4">Global Marketing Reach</h2>
-  <div className="flex flex-wrap gap-4 sm:gap-6">
-    {/* First Container */}
-    <div className="flex-1 min-w-[250px] sm:min-w-[300px] bg-gray-50 p-4 rounded-lg flex-col sm:flex-row flex items-start">
-      {/* Image for Mobile */}
-      <img 
-        src="./sections/partners/luxury.png" 
-        alt="Leading Real Estate Companies" 
-        className="w-[150px] sm:w-[250px] md:w-[350px] h-auto object-contain rounded-lg mb-4 sm:mb-0 sm:mr-4 sm:self-center mx-auto sm:mx-0"
-      />
-      {/* Content */}
-      <div className="flex-1 pr-2 sm:pr-4">
-        <h3 className="text-lg sm:text-xl font-semibold mb-2">Leading Real Estate Companies of The World® & Luxury Portfolio International</h3>
-        <p className="text-sm sm:text-base">
-          JRockcliff is a founding member of Luxury Portfolio International®, the luxury division of Leading Real Estate Companies of the World®. With more than 500 member firms around the world, our luxury listings are exposed to a vast global audience and reach potential buyers and investors in over 50 countries.
-        </p>
-      </div>
-    </div>
+<section className="relative bg-transparent p-4 sm:p-6 mb-4 sm:mb-6 rounded-lg">
+      <h2 className="text-xl sm:text-2xl font-bold mb-4 z-10 relative">Global Marketing Reach</h2>
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 relative z-0">
+        {/* First Container */}
+        <div className="flex-1 min-w-[250px] sm:min-w-[300px] bg-gray-50 p-4 rounded-lg flex flex-col sm:flex-row items-start relative">
+          {/* Image */}
+          <img 
+            src="./sections/partners/luxury.png" 
+            alt="Leading Real Estate Companies" 
+            className="w-full sm:w-[250px] md:w-[350px] h-auto object-contain rounded-lg mb-4 sm:mb-0 sm:mr-4 sm:self-start transition-transform transform sm:translate-y-0 sm:relative"
+          />
+          {/* Content */}
+          <div className="flex-1 pr-2 sm:pr-4">
+            <h3 className="text-lg sm:text-xl font-semibold mb-2">Leading Real Estate Companies of The World® & Luxury Portfolio International</h3>
+            <p className="text-sm sm:text-base">
+              JRockcliff is a founding member of Luxury Portfolio International®, the luxury division of Leading Real Estate Companies of the World®. With more than 500 member firms around the world, our luxury listings are exposed to a vast global audience and reach potential buyers and investors in over 50 countries.
+            </p>
+          </div>
+        </div>
 
-    {/* Second Container */}
-    <div className="flex-1 min-w-[250px] sm:min-w-[400px] bg-gray-50 p-4 rounded-lg flex-col sm:flex-row flex items-start">
-      {/* Image for Mobile */}
-      <img 
-        src="./sections/partners/global.png" 
-        alt="Who's Who in Luxury Real Estate" 
-        className="w-[150px] sm:w-[250px] md:w-[350px] h-auto object-contain rounded-lg mb-4 sm:mb-0 sm:mr-4 sm:self-center mx-auto sm:mx-0"
-      />
-      {/* Content */}
-      <div className="flex-1 pr-2 sm:pr-4">
-        <h3 className="text-lg sm:text-xl font-semibold mb-2">Who's Who in Luxury Real Estate</h3>
-        <p className="text-sm sm:text-base">
-          Who’s Who in Luxury Real Estate is a global collection of luxury real estate brokers. Through our international affiliations, we have a strong presence in over 50 countries. Our luxury listings are sent to prominent international real estate sites, reaching over 70 million potential buyers and investors worldwide through our relationships with:
-        </p>
-        <img 
-          src="./sections/partners/RealEstatePortals-L.png" 
-          alt="Placeholder Image" 
-          className="w-full h-auto object-cover mt-4 rounded-lg"
-        />
-        <p className="mt-2 sm:mt-4 text-sm sm:text-base">
-          We also have several well-positioned affiliate offices in China, providing our clients with access to buyers in Hong Kong, Shanghai, and Beijing.
-        </p>
+        {/* Second Container */}
+        <div className="flex-1 min-w-[250px] sm:min-w-[400px] bg-gray-50 p-4 rounded-lg flex flex-col sm:flex-row items-start relative">
+          {/* Image */}
+          <img 
+            src="./sections/partners/global.png" 
+            alt="Who's Who in Luxury Real Estate" 
+            className="w-full sm:w-[250px] md:w-[350px] h-auto object-contain rounded-lg mb-4 sm:mb-0 sm:mr-4 sm:self-start transition-transform transform sm:translate-y-0 sm:relative"
+          />
+          {/* Content */}
+          <div className="flex-1 pr-2 sm:pr-4">
+            <h3 className="text-lg sm:text-xl font-semibold mb-2">Who's Who in Luxury Real Estate</h3>
+            <p className="text-sm sm:text-base">
+              Who’s Who in Luxury Real Estate is a global collection of luxury real estate brokers. Through our international affiliations, we have a strong presence in over 50 countries. Our luxury listings are sent to prominent international real estate sites, reaching over 70 million potential buyers and investors worldwide through our relationships with:
+            </p>
+            <img 
+              src="./sections/partners/RealEstatePortals-L.png" 
+              alt="Real Estate Portals" 
+              className="w-full h-auto object-cover mt-4 rounded-lg"
+            />
+            <p className="mt-2 sm:mt-4 text-sm sm:text-base">
+              We also have several well-positioned affiliate offices in China, providing our clients with access to buyers in Hong Kong, Shanghai, and Beijing.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
   {/* Third Section */}
   <section className="bg-transparent p-4 sm:p-6 mb-4 sm:mb-6 rounded-lg mt-4 sm:mt-6">

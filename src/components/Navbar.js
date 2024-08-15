@@ -91,19 +91,19 @@ function Navbar() {
 
       {/* Extra Navbar Row */}
       {showExtraNavbar && (
-        <div className="py-4 fixed top-[64px] left-0 w-full z-40" style={{ backgroundColor: '#585454' }}>
-          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 md:px-6 space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-2 rounded-lg px-2 py-1 w-full md:w-auto" style={{ backgroundColor: '#585454' }}>
-              <FaSearch className="text-white" />
+        <div className="fixed top-[64px] left-0 w-full z-40 bg-[#585454]">
+          <div className="container mx-auto flex items-center justify-between px-2 md:px-4 py-2 space-x-2">
+            <div className="flex items-center space-x-2 rounded-lg bg-[#585454] w-full max-w-xs">
+              <FaSearch className="text-white text-sm md:text-base" />
               <input
                 type="text"
                 placeholder="Search for area..."
-                className="bg-transparent text-white placeholder-white px-2 py-1 outline-none w-full"
+                className="bg-transparent text-white placeholder-white px-2 py-1 outline-none w-full text-sm md:text-base"
               />
             </div>
-            <button className="bg-transparent border border-transparent text-white px-4 py-3 rounded-lg hover:bg-white hover:text-black flex items-center">
+            <button className="bg-transparent border border-transparent text-white px-2 py-1 rounded-lg hover:bg-white hover:text-black flex items-center text-sm md:text-base">
               Book an Appointment
-              <FaArrowRight className="ml-2" />
+              <FaArrowRight className="ml-1" />
             </button>
           </div>
         </div>

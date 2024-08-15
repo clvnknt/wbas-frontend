@@ -7,25 +7,25 @@ const tabs = [
     id: 1,
     title: "Responsive",
     content: "Our marketing strategies are designed to be responsive and adaptable to different platforms, ensuring maximum reach and engagement.",
-    image: "/sections/comprehensive-marketing/Responsive.png",
+    image: "./sections/comprehensive-marketing/Responsive.png",
   },
   {
     id: 2,
     title: "Syndication",
     content: "We syndicate your property listings across multiple channels to increase visibility and attract potential buyers.",
-    image: "/sections/comprehensive-marketing/Syndication.png",
+    image: "./sections/comprehensive-marketing/Syndication.png",
   },
   {
     id: 3,
     title: "Virtual Tour",
     content: "Create immersive virtual tours to give potential buyers a detailed view of your property from the comfort of their own home.",
-    image: "/sections/comprehensive-marketing/VirtualTour.png",
+    image: "./sections/comprehensive-marketing/VirtualTour.png",
   },
   {
     id: 4,
     title: "Drone Photography",
     content: "High-quality photography to showcase your property in the best light and attract more interest.",
-    image: "/sections/comprehensive-marketing/DronePhotography.png",
+    image: "./sections/comprehensive-marketing/DronePhotography.png",
   },
 ];
 
