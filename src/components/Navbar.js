@@ -1,20 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaSearch, FaArrowRight } from 'react-icons/fa';
 
 function Navbar() {
   const [scrollDirection, setScrollDirection] = useState('up');
   const [prevScrollY, setPrevScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showExtraNavbar, setShowExtraNavbar] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+
+      // Determine scroll direction
       if (currentScrollY > prevScrollY) {
         setScrollDirection('down');
       } else {
         setScrollDirection('up');
       }
       setPrevScrollY(currentScrollY);
+
+      // Show extra navbar when scrolling past the bottom of the Services section
+      const servicesSection = document.querySelector('#services-header-section');
+      if (servicesSection) {
+        const sectionBottom = servicesSection.getBoundingClientRect().bottom + window.scrollY;
+        if (currentScrollY > sectionBottom) {
+          setShowExtraNavbar(true);
+        } else {
+          setShowExtraNavbar(false);
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -35,7 +49,7 @@ function Navbar() {
         scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center p-4">
+      <div className="container mx-auto flex justify-between items-center p-4 relative">
         <div className="text-lg font-bold">
           <img 
             src="/sections/logos/jhs.png" 
@@ -52,9 +66,19 @@ function Navbar() {
           </button>
         </div>
         <div
-          className={`md:flex md:items-center space-y-4 md:space-y-0 md:space-x-4 absolute md:relative top-full left-0 w-full md:w-auto ${isMenuOpen ? 'block' : 'hidden'} p-4 md:p-0`}
+          className={`md:flex md:items-center space-y-4 md:space-y-0 md:space-x-4 absolute md:relative top-full left-0 w-full md:w-auto ${
+            isMenuOpen ? 'block' : 'hidden'
+          } p-4 md:p-0`}
           style={{ backgroundColor: '#1a1a1a' }}
         >
+          {isMenuOpen && (
+            <button
+              onClick={toggleMenu}
+              className="absolute top-4 right-4 text-white text-2xl"
+            >
+              <FaTimes />
+            </button>
+          )}
           <a href="/" className="block md:inline hover:bg-gray-700 px-3 py-2 rounded">Meet the team</a>
           <a href="/search" className="block md:inline hover:bg-gray-700 px-3 py-2 rounded">Search for homes</a>
           <a href="/communities" className="block md:inline hover:bg-gray-700 px-3 py-2 rounded">Our communities</a>
@@ -65,6 +89,26 @@ function Navbar() {
           <a href="/contact" className="block md:inline hover:bg-gray-700 px-3 py-2 rounded">Contact us</a>
         </div>
       </div>
+
+      {/* Extra Navbar Row */}
+      {showExtraNavbar && (
+        <div className="py-4 fixed top-[64px] left-0 w-full z-40" style={{ backgroundColor: '#585454' }}>
+          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 md:px-6 space-y-4 md:space-y-0">
+            <div className="flex items-center space-x-2 rounded-lg px-2 py-1 w-full md:w-auto" style={{ backgroundColor: '#585454' }}>
+              <FaSearch className="text-white" />
+              <input
+                type="text"
+                placeholder="Search for area..."
+                className="bg-transparent text-white placeholder-white px-2 py-1 outline-none w-full"
+              />
+            </div>
+            <button className="bg-transparent border border-transparent text-white px-4 py-3 rounded-lg hover:bg-white hover:text-black flex items-center">
+              Book an Appointment
+              <FaArrowRight className="ml-2" />
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

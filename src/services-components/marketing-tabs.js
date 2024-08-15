@@ -30,54 +30,56 @@ const tabs = [
 ];
 
 const MarketingTabs = () => {
-    const [activeTab, setActiveTab] = useState(tabs[0].id);
-  
-    return (
-      <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-        <div className="flex border-b border-gray-300 mb-4">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`flex-1 text-center py-2 px-4 border-b-2 transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'border-blue-500 text-blue-500 font-bold'
-                  : 'border-transparent text-gray-500 hover:text-blue-500'
-              }`}
-            >
-              {tab.title}
-            </button>
-          ))}
-        </div>
-  
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="flex flex-col md:flex-row"
+  const [activeTab, setActiveTab] = useState(tabs[0].id);
+
+  return (
+    <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md mb-6">
+      {/* Tab Buttons */}
+      <div className="flex flex-wrap border-b border-gray-300 mb-4">
+        {tabs.map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id)}
+            className={`flex-1 text-center py-2 px-3 sm:px-4 border-b-2 transition-all duration-300 ${
+              activeTab === tab.id
+                ? 'border-blue-500 text-blue-500 font-bold'
+                : 'border-transparent text-gray-500 hover:text-blue-500'
+            } text-sm sm:text-base`}
           >
-            {tabs.map((tab) => (
+            {tab.title}
+          </button>
+        ))}
+      </div>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.3 }}
+          className="flex flex-col md:flex-row items-center"
+        >
+          {tabs.map(
+            (tab) =>
               tab.id === activeTab && (
-                <div key={tab.id} className="flex flex-col md:flex-row">
+                <div key={tab.id} className="flex flex-col md:flex-row items-center">
                   <img
                     src={tab.image}
                     alt={tab.title}
-                    className="max-w-xs max-h-20 w-auto h-auto object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
+                    className="w-24 h-24 sm:w-16 sm:h-16 md:w-20 md:h-20 object-cover rounded-lg mb-4 md:mb-0 md:mr-4"
                   />
-                  <div className="md:w-2/3">
-                    <h3 className="text-xl font-semibold mb-2">{tab.title}</h3>
-                    <p className="text-gray-700">{tab.content}</p>
+                  <div className="md:w-4/5 text-center md:text-left">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2">{tab.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-700">{tab.content}</p>
                   </div>
                 </div>
               )
-            ))}
-          </motion.div>
-        </AnimatePresence>
-      </div>
-    );
-  };
+          )}
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+};
 
 export default MarketingTabs;
